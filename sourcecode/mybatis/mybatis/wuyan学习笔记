@@ -1,0 +1,15 @@
+/**
+*@Author:wuyan
+*@Description:@wuyan 学习笔记
+*@Date:22:07 2017/11/26
+*/
+
+2017/11/26
+
+新建了类Classes、Teacher、student，sql映射文件classMapper.mxl
+单元测试类calssTest
+在SqlMapConfig.xml中加了两个别名：
+        <typeAlias type="com.iot.mybatis.po.student" alias="student"/>
+        <typeAlias type="com.iot.mybatis.po.Teacher" alias="Teacher"/>
+
+作者注释快捷键设置网址：http://blog.csdn.net/u013412790/article/details/52807102
