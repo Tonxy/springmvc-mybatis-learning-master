@@ -1,28 +1,6 @@
 # 我的 springmvc + mybatis 学习笔记
 
-笔记分为两大部分: mybatis 和 springmvc
 
-- [mybatis](/mybatis)
-- [springmvc](/springmvc)
-
-
-笔记内容主要是 mybatis 和 springmvc 的一些基本概念和使用方法，涉及概念介绍、环境搭建、编程细节、运行调试等方面。
-
-这套笔记整体偏入门和应用，适合快速上手，对底层实现和机理并未做过多分析。关于 spring 源码的学习笔记,可以参考我的另一个仓库[spring-learning](https://github.com/brianway/spring-learning)
-
-
-**如果觉得不错，请先在这个仓库上点个 star 吧**，这也是对我的肯定和鼓励，谢谢了。不定时进行调整和补充，需要关注更新的请 Watch、Star、Fork
-
-如果你只是单纯要阅读的话，建议移步 CSDN 或者 oschina 上观看，访问速度快很多：
-
->* CSDN:[springmvc+mybatis学习笔记(汇总)](http://blog.csdn.net/h3243212/article/details/51016271)
->* oschina:[springmvc+mybatis学习笔记(汇总)](http://my.oschina.net/brianway/blog/649946)
-
-
-
------
-
-## 目录
 
   - [mybatis](/mybatis)
     - [mybatis学习笔记(1)-对原生jdbc程序中的问题总结.md](/mybatis/mybatis学习笔记(1)-对原生jdbc程序中的问题总结.md)
@@ -120,23 +98,6 @@
 - [**learnssm-firstssm**](/sourcecode/learnssm-firstssm):**核心代码**,springmvc 和 mybatis 整合部分的笔记几乎所有的源码
 
 
------
-
-## 赞助
-
-如果您觉得该项目对您有帮助，请扫描下方二维码对我进行鼓励，以便我更好的维护和更新，谢谢支持！
-
-![支付宝](http://brianway.github.io/assets/images/alipay_small.png)
-![微信](http://brianway.github.io/assets/images/wechatpay_small.png)
-
-
-## 联系作者
-
-- [Brian's Personal Website](http://brianway.github.io/)
-- [CSDN](http://blog.csdn.net/h3243212/)
-- [oschina](http://my.oschina.net/brianway)
-
-Email: weichuyang@163.com
 
 -----
 
