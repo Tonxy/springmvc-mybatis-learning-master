@@ -3,10 +3,14 @@ package com.iot.ssm.dao;
 import com.iot.ssm.po.User;
 import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 
 /**
- * Created by Brian on 2016/2/24.
- */
+*@Author:wuyan
+*@Description:
+*@Date:12:39 2017/11/27
+*/
 public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao {
 
     @Override

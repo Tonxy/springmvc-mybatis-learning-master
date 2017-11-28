@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iot.ssm.mapper.StudentMapper">
+
+    <!-- 在映射文件中配置很多sql语句 -->
+
+    <select id="findStuById" parameterType="int" resultType="student">
+        SELECT s_id id,s_name name,class_id classId FROM student WHERE s_id=#{value}
+    </select>
+
+    <select id="findStuById02" parameterType="int" resultMap="StuRresultMap">
+        SELECT * FROM student WHERE s_id=#{value}
+    </select>
+    <resultMap id="StuRresultMap" type="student">
+        <id property="id" column="s_id"/>
+        <result property="name" column="s_name" javaType="String"/>
+        <result property="classId" column="class_id"/>
+    </resultMap>
+
+
+</mapper>

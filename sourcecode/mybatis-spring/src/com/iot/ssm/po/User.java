@@ -14,9 +14,6 @@ public class User implements Serializable {
     private Date birthday;// 生日
     private String address;// 地址
 
-    //用户创建的订单列表
-    //private List<Orders> ordersList;
-
     public int getId() {
         return id;
     }

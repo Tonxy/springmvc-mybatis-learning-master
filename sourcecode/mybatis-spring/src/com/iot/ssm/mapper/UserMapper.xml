@@ -8,10 +8,75 @@
  -->
 <mapper namespace="com.iot.ssm.mapper.UserMapper">
 
-    <!-- 在映射文件中配置很多sql语句 -->
-
     <select id="findUserById" parameterType="int" resultType="user">
-        SELECT * FROM user WHERE id=#{value}
+        SELECT * FROM user02 WHERE id=#{value}
     </select>
+
+    <select id="findUserById02"  resultType="user">
+        SELECT *  FROM user02
+        <trim prefix="WHERE" prefixOverrides="AND|OR">
+
+            <if test="id != null"> AND id=#{id}</if>
+
+            <if test="sex != null"> AND sex=#{sex}</if>
+
+        </trim>
+    </select>
+
+    <select id="findUserByName" resultType="user">
+        SELECT * from user02
+        <trim prefix="where" prefixOverrides="AND|OR">
+            <if test="username!=null and username.length()>0">AND username=#{username}</if>
+            <if test="sex!=null">AND sex=#{sex}</if>
+        </trim>
+    </select>
+
+    <select id="findUserListByAddr" resultType="user">
+        SELECT * FROM user02 WHERE address IN
+        <foreach collection="list" item="userAddrList" open="(" separator="," close=")">
+            #{userAddrList}
+        </foreach>
+
+    </select>
+    <select id="findUserListByAddr02" resultType="user">
+        SELECT * FROM user02 WHERE address=#{address}
+    </select>
+
+    <select id="findUserByChoose" resultType="user">
+        SELECT * FROM user02 WHERE 1=1
+
+            <choose>
+                <when test="address!=null and address.length()>0">
+                    AND address=#{address}
+                </when>
+                <when test="id!=null">
+                    AND id=#{id}
+                </when>
+                <when test="username!=null and username.length()>0">
+                    AND username=#{username}
+                </when>
+                <otherwise>
+                    sex=#{sex}
+                </otherwise>
+            </choose>
+
+    </select>
+
+    <update id="updateById" parameterType="int">
+        UPDATE user02 u
+        <set>
+            <if test="username!=null and username.length()>0">
+               username=#{username},
+            </if>
+            <if test="address!=null and address.length()>0">
+                address=#{address}
+            </if>
+        </set>
+        <where>
+            <if test="id!=null">
+                id=#{id}
+            </if>
+        </where>
+    </update>
 
 </mapper>
